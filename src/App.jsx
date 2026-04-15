@@ -1,13 +1,12 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function SumanPortfolio() {
-  const stats = [
-    { label: "Coding Problems", value: "500+" },
-    { label: "Core Focus", value: "Backend" },
-    { label: "Tech Path", value: "MERN + DevOps" },
-    { label: "Learning", value: "System Design" },
-  ];
-
+const stats = [
+  { label: "Focus", value: "Backend" },
+  { label: "Stack", value: "MERN" },
+  { label: "Learning", value: "DevOps" },
+  { label: "Goal", value: "Cloud" },
+];
   const projects = [
     {
       title: "Interview Talent Q",
@@ -228,10 +227,8 @@ export default function SumanPortfolio() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "MERN Stack",
-                        "System Design",
-                        "DevOps",
                         "Java DSA",
+                        "DevOps",
                       ].map((item) => (
                         <span
                           key={item}
