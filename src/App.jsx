@@ -184,7 +184,7 @@ const stats = [
               </div>
             </div>
 
-            <div className="w-full min-w-0 rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-cyan-950/20 backdrop-blur-xl sm:p-5 lg:scale-105 lg:origin-top">
+            <div className="w-full min-w-0 rounded-4xl border border-white/10 bg-white/5 p-4 shadow-2xl shadow-cyan-950/20 backdrop-blur-xl sm:p-5 lg:scale-105 lg:origin-top">
               <div className="rounded-[1.5rem] border border-white/10 bg-[#050d1d] p-4 sm:p-6">
                 <div className="mb-4 flex items-center gap-2">
                   <span className="h-3 w-3 rounded-full bg-white/25" />
