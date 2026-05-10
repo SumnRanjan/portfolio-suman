@@ -10,7 +10,7 @@ export default function SumanPortfolio() {
   const projects = [
     {
       title: "Talent IQ",
-      type: "AI Interview & Hiring Platform",
+      type: "Interview & Hiring Platform",
       description:
         "A modern hiring and interview management platform with dashboards, candidate workflows, role-based access, and scalable MERN architecture.",
       liveLink:
