@@ -1,55 +1,64 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function SumanPortfolio() {
-const stats = [
-  { label: "Focus", value: "Backend" },
-  { label: "Stack", value: "MERN" },
-  { label: "Learning", value: "DevOps" },
-  { label: "Goal", value: "Cloud" },
-];
+  const stats = [
+    { label: "Focus", value: "Backend" },
+    { label: "Stack", value: "MERN" },
+    { label: "Learning", value: "DevOps" },
+    { label: "Goal", value: "Cloud" },
+  ];
   const projects = [
     {
-      title: "Interview Talent Q",
-      type: "Interview Platform",
+      title: "Talent IQ",
+      type: "AI Interview & Hiring Platform",
       description:
-        "A hiring workflow platform focused on structured interviews, candidate flow, and scalable backend logic.",
-      link: "https://github.com/SumnRanjan/Interview-Talent-Q",
+        "A modern hiring and interview management platform with dashboards, candidate workflows, role-based access, and scalable MERN architecture.",
+      liveLink:
+        "https://talent-iq-git-main-suman-ranjans-projects.vercel.app/dashboard",
+      repoLink: "https://github.com/SumnRanjan/Talent-IQ",
       tag: "Platform",
       image:
         "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
     },
+
     {
-      title: "Forever Ecom",
-      type: "E-commerce",
+      title: "TeamTask",
+      type: "Team Collaboration Platform",
       description:
-        "A modern commerce experience with product flows, user-facing UI, and backend integrations.",
-      link: "https://github.com/SumnRanjan/Forever-Ecom",
-      tag: "Commerce",
-      image:
-        "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      title: "LamaBlog",
-      type: "Blog Platform",
-      description:
-        "A content-focused application with clean CRUD patterns, auth, and practical full-stack structure.",
-      link: "https://github.com/SumnRanjan/LamaBlog",
-      tag: "Content",
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      title: "PlayIt Backend",
-      type: "Streaming Backend",
-      description:
-        "A backend-oriented streaming project designed around API flows, scalability, and media-friendly architecture.",
-      link: "https://github.com/SumnRanjan/PlayIt-Backend",
-      tag: "Backend",
+        "A full-stack MERN-based team collaboration and task management platform featuring JWT authentication, role-based access control, task tracking, dashboard analytics, and a modern responsive UI.",
+      liveLink: "https://team-task-manager-ttm.up.railway.app/",
+      repoLink: "https://github.com/SumnRanjan/team-task-manager",
+      tag: "MERN Stack",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
     },
-  ];
 
+    {
+      title: "PlayIt Backend",
+      type: "Streaming Backend API",
+      description:
+        "A feature-rich backend REST API for a social video streaming platform built with Node.js, Express, and MongoDB. Supports video uploads, authentication, playlists, likes, comments, subscriptions, and scalable media handling.",
+      liveLink: "https://github.com/SumnRanjan/PlayIt-Backend",
+      repoLink: "https://github.com/SumnRanjan/PlayIt-Backend",
+      tag: "Backend",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    },
+
+    {
+      title: "Real-Time Chat Application",
+      type: "DevOps | Docker | Kubernetes",
+      description:
+        "A full-stack real-time chat application containerized with Docker and deployed on Kubernetes using Minikube and Ingress routing. Includes multi-stage Docker builds, scalable service communication, and modern DevOps practices.",
+      liveLink:
+        "https://github.com/SumnRanjan/Real-Time-Chat-Application-3-Tier-Docker-K8s",
+      repoLink:
+        "https://github.com/SumnRanjan/Real-Time-Chat-Application-3-Tier-Docker-K8s",
+      tag: "DevOps",
+      image:
+        "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1200&q=80",
+    },
+  ];
   const skillGroups = [
     {
       title: "Languages",
@@ -226,10 +235,7 @@ const stats = [
                       Current Direction
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {[
-                        "Java DSA",
-                        "DevOps",
-                      ].map((item) => (
+                      {["Java DSA", "DevOps"].map((item) => (
                         <span
                           key={item}
                           className="rounded-full border border-cyan-400/15 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-200"
@@ -356,6 +362,7 @@ const stats = [
                         {project.title}
                       </h4>
                     </div>
+
                     <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
                       {project.tag}
                     </span>
@@ -374,15 +381,27 @@ const stats = [
                   </p>
 
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-sm text-white/45">GitHub Project</p>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="shrink-0 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition group-hover:border-cyan-300/30 group-hover:text-cyan-200"
-                    >
-                      View Repo
-                    </a>
+                    <p className="text-sm text-white/45">Project Links</p>
+
+                    <div className="flex gap-3">
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-400/20"
+                      >
+                        Live Demo
+                      </a>
+
+                      <a
+                        href={project.repoLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-cyan-300/30 hover:text-cyan-200"
+                      >
+                        GitHub
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
