@@ -111,7 +111,7 @@ export default function SumanPortfolio() {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#030712] text-white selection:bg-cyan-400/30">
+    <div className="min-h-screen overflow-x-hidden bg-black text-white selection:bg-cyan-400/30">
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:88px_88px] opacity-30" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.14),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.12),transparent_28%),radial-gradient(circle_at_50%_100%,rgba(236,72,153,0.08),transparent_25%)]" />
