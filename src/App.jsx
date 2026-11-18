@@ -81,7 +81,10 @@ const skills = {
     ["Java", "java"], ["Python", "py"], ["JavaScript", "js"],
     ["TypeScript", "ts"], ["C++", "cpp"], ["Bash", "bash"],
   ],
-  frontend: [["React.js", "react"], ["Tailwind", "tailwind"], ["HTML", "html"], ["CSS", "css"]],
+  frontend: [
+    ["React.js", "react"], ["Next.js", "nextjs"], ["Tailwind", "tailwind"],
+    ["HTML", "html"], ["CSS", "css"],
+  ],
   backend: [
     ["Node.js", "nodejs"], ["Express.js", "express"], ["MongoDB", "mongodb"],
     ["MySQL", "mysql"], ["Postman", "postman"],
