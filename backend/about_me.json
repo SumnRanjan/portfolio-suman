@@ -1,0 +1,13 @@
+{
+  "hobbies": ["playing cricket", "watching tech YouTube", "gaming"],
+  "free_time": "I build side projects, solve DSA problems and explore new DevOps and AI tools",
+  "interests": ["AI agents", "system design", "cloud architecture"],
+  "sports_and_games": ["cricket", "chess"],
+  "music_movies_books": ["sci-fi movies", "lo-fi music while coding"],
+  "fun_facts": ["I debug code like Sherlock solves mysteries"],
+  "personality": "curious, calm under pressure, enjoys learning by building",
+  "location": "Jharkhand, India",
+  "languages_spoken": ["English", "Hindi"],
+  "career_goals": "grow as a DevOps / AI engineer building scalable systems",
+  "work_preferences": "open to remote, hybrid or on-site roles"
+}

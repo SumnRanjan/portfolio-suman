@@ -1,0 +1,79 @@
+{
+  "name": "Suman Ranjan",
+  "email": "sumanranjan17291729@gmail.com",
+  "phone": "+91-7973049610",
+  "total_experience_years": 0.33,
+  "skills": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Bash",
+    "SQL",
+    "React.js",
+    "Next.js",
+    "Tailwind CSS",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Express.js",
+    "REST APIs",
+    "MongoDB",
+    "MySQL",
+    "Qdrant (Vector DB)",
+    "LLM APIs",
+    "Prompt Engineering",
+    "RAG",
+    "Embeddings",
+    "Vector DB (Qdrant)",
+    "RAG Evaluation",
+    "ReAct Agents",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "AWS",
+    "Linux",
+    "CI/CD",
+    "Prometheus",
+    "Grafana",
+    "Git",
+    "GitHub",
+    "Postman",
+    "Data Structures & Algorithms",
+    "OOP",
+    "OS",
+    "DBMS",
+    "Computer Networks"
+  ],
+  "experiences": [
+    {
+      "company": "OctaNet Pvt. Ltd.",
+      "role": "Full Stack Development Intern",
+      "duration": "Feb 2024 – May 2024",
+      "description": "Developed responsive and reusable frontend components using React.js, supporting dynamic data rendering and consistent UI. Integrated frontend applications with backend REST APIs using Axios, handling asynchronous requests, API responses, and errors. Implemented reusable UI components and managed application data flow to build responsive and maintainable interfaces. Worked with JavaScript, React.js, HTML, CSS, REST APIs, and Git in a team-based development environment.",
+      "skills_used": [
+        "JavaScript",
+        "React.js",
+        "HTML",
+        "CSS",
+        "REST APIs",
+        "Axios",
+        "Git"
+      ]
+    }
+  ],
+  "education": [
+    "Chitkara University Chandigarh, India – Bachelor of Engineering in Computer Science Engineering; CGPA: 8.69 (2022 – 2026)",
+    "GD DAV Public School Jharkhand, India – Class XII; 73% (2020 – 2022)",
+    "GD DAV Public School Jharkhand, India – Class X; 80% (2019 – 2020)"
+  ],
+  "projects": [
+    "AI Resume Parser & AI Portfolio – LLM, RAG & Vector Search — Python",
+    "ChatSphere – Real-Time Chat Platform — DevOps",
+    "TalentIQ – Real-Time Interview Platform — MERN Stack"
+  ],
+  "certifications": [
+    "Applied DevOps Engineering (IBM)",
+    "Linux Commands & Shell Scripting (IBM)",
+    "Linux & SQL (Google)"
+  ]
+}

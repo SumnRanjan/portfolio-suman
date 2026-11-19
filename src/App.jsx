@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileCode, FaSearch, FaCodeBranch, FaFolderOpen, FaChevronDown } from "react-icons/fa";
+import AskSuman from "./AskSuman";
+import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileCode, FaSearch, FaCodeBranch, FaFolderOpen, FaChevronDown, FaRobot } from "react-icons/fa";
 
 /* ---------- DATA ---------- */
 const GITHUB = "https://github.com/SumnRanjan";
@@ -22,6 +23,7 @@ const projects = [
     language: "Python",
     topics: ["llm", "rag", "embeddings", "qdrant", "pydantic"],
     featured: true,
+    aiChat: true, // shows a "Try it" button that opens the AI chat
   },
   {
     title: "QuizFlow",
@@ -81,10 +83,7 @@ const skills = {
     ["Java", "java"], ["Python", "py"], ["JavaScript", "js"],
     ["TypeScript", "ts"], ["C++", "cpp"], ["Bash", "bash"],
   ],
-  frontend: [
-    ["React.js", "react"], ["Next.js", "nextjs"], ["Tailwind", "tailwind"],
-    ["HTML", "html"], ["CSS", "css"],
-  ],
+  frontend: [["React.js", "react"], ["Next.js", "nextjs"], ["Tailwind", "tailwind"],["HTML", "html"], ["CSS", "css"]],
   backend: [
     ["Node.js", "nodejs"], ["Express.js", "express"], ["MongoDB", "mongodb"],
     ["MySQL", "mysql"], ["Postman", "postman"],
@@ -329,6 +328,13 @@ export default function SumanPortfolio() {
                 {f.name}
               </a>
             ))}
+            <button
+              onClick={() => window.dispatchEvent(new Event("open-ask-suman"))}
+              className="flex w-full items-center gap-2 border-l-2 border-transparent py-1.5 pl-6 text-left text-[#3fb950] transition hover:bg-[#161b22]"
+            >
+              <span className="h-2 w-2 rounded-sm bg-[#3572A5]" /> ask_suman.py
+              <span className="ml-auto mr-3 rounded bg-[#238636]/30 px-1.5 text-[10px] text-[#3fb950]">AI</span>
+            </button>
             <p className="flex items-center gap-2 py-1.5 pl-6 text-[#8b949e]">
               <span className="h-2 w-2 rounded-sm bg-[#8b949e]" /> README.md
             </p>
@@ -407,6 +413,12 @@ export default function SumanPortfolio() {
                 >
                   ./contact.sh
                 </a>
+                <button
+                  onClick={() => window.dispatchEvent(new Event("open-ask-suman"))}
+                  className="flex items-center justify-center gap-2 rounded-md border border-[#3fb950]/50 bg-[#3fb950]/10 px-5 py-2.5 text-sm font-semibold text-[#3fb950] transition hover:bg-[#3fb950]/20"
+                >
+                  <FaRobot /> python ask_suman.py
+                </button>
               </div>
             </div>
 
@@ -545,6 +557,14 @@ export default function SumanPortfolio() {
                     {p.language}
                   </span>
                   <div className="flex gap-2">
+                    {p.aiChat && (
+                      <button
+                        onClick={() => window.dispatchEvent(new Event("open-ask-suman"))}
+                        className="flex items-center gap-1.5 rounded-md bg-[#238636] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#2ea043]"
+                      >
+                        <FaRobot /> Try it
+                      </button>
+                    )}
                     {p.liveLink && (
                       <a
                         href={p.liveLink}
@@ -643,6 +663,9 @@ export default function SumanPortfolio() {
           </p>
         </Section>
       </div>
+
+      {/* ---------- AI CHAT (talks to the FastAPI /chat endpoint) ---------- */}
+      <AskSuman />
 
       {/* ---------- STATUS BAR (full width) ---------- */}
       <footer className="fixed inset-x-0 bottom-0 z-40 flex h-7 items-center justify-between gap-2 bg-[#1f6feb] px-3 text-[11px] text-white sm:text-xs">
