@@ -4,10 +4,10 @@ import { FaRobot, FaTimes, FaPaperPlane } from "react-icons/fa";
 const API_URL = (import.meta.env.VITE_API_URL || "http://localhost:8000").replace(/\/$/, "");
 
 const SUGGESTIONS = [
-  "What are Suman's main skills?",
-  "Tell me about his DevOps experience",
-  "What AI projects has he built?",
-  "Where did he study?",
+  "Why should we hire Suman?",
+  "What has he built with AI and RAG?",
+  "What does he do in his free time?",
+  "How can I contact him?",
 ];
 
 const WELCOME = {
@@ -57,6 +57,11 @@ export default function AskSuman() {
     const openChat = () => setOpen(true);
     window.addEventListener("open-ask-suman", openChat);
     return () => window.removeEventListener("open-ask-suman", openChat);
+  }, []);
+
+  // wake up the Render server as soon as someone opens the site
+  useEffect(() => {
+    fetch(`${API_URL}/health`).catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -117,7 +122,7 @@ export default function AskSuman() {
         <div
           role="dialog"
           aria-label="Ask Suman's AI assistant"
-          className="fixed inset-x-3 bottom-10 z-50 flex h-[70vh] max-h-[600px] flex-col overflow-hidden rounded-xl border border-[#30363d] bg-[#0d1117] font-mono shadow-2xl shadow-black/60 sm:inset-x-auto sm:right-6 sm:w-[420px]"
+          className="fixed inset-x-3 bottom-10 z-50 flex h-[70vh] max-h-150 flex-col overflow-hidden rounded-xl border border-[#30363d] bg-[#0d1117] font-mono shadow-2xl shadow-black/60 sm:inset-x-auto sm:right-6 sm:w-105"
         >
           <div className="flex items-center justify-between border-b border-[#30363d] bg-[#161b22] px-4 py-2.5">
             <div className="flex items-center gap-2">

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AskSuman from "./AskSuman";
 import { FaGithub, FaLinkedin, FaEnvelope, FaRegFileCode, FaSearch, FaCodeBranch, FaFolderOpen, FaChevronDown, FaRobot } from "react-icons/fa";
 
-/* ---------- DATA ---------- */
+
 const GITHUB = "https://github.com/SumnRanjan";
 const LINKEDIN = "https://www.linkedin.com/in/suman-ranjan-12719338a/";
 const EMAIL = "sumanranjan17291729@gmail.com";
@@ -23,7 +23,7 @@ const projects = [
     language: "Python",
     topics: ["llm", "rag", "embeddings", "qdrant", "pydantic"],
     featured: true,
-    aiChat: true, // shows a "Try it" button that opens the AI chat
+    aiChat: true,
   },
   {
     title: "QuizFlow",
@@ -131,11 +131,11 @@ const files = [
 
 const roles = ["Full Stack Developer", "DevOps Engineer", "AI Engineer", "Problem Solver"];
 
-/* ---------- SMALL UI PIECES ---------- */
-const K = ({ c }) => <span className="text-[#ff7b72]">{c}</span>; // keyword
-const S = ({ c }) => <span className="text-[#a5d6ff]">"{c}"</span>; // string
-const P = ({ c }) => <span className="text-[#79c0ff]">{c}</span>; // property
-const C = ({ c }) => <span className="text-[#8b949e]">{c}</span>; // comment
+
+const K = ({ c }) => <span className="text-[#ff7b72]">{c}</span>; 
+const S = ({ c }) => <span className="text-[#a5d6ff]">"{c}"</span>; 
+const P = ({ c }) => <span className="text-[#79c0ff]">{c}</span>; 
+const C = ({ c }) => <span className="text-[#8b949e]">{c}</span>;
 
 function Window({ title, children, className = "" }) {
   return (
@@ -197,6 +197,7 @@ function useTypewriter(words) {
   const [del, setDel] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setText(words[0]);
       return;
     }
@@ -278,7 +279,7 @@ export default function SumanPortfolio() {
           <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
           <span className="h-3 w-3 rounded-full bg-[#28c840]" />
         </div>
-        <div className="hidden items-center gap-2 rounded-md border border-[#30363d] bg-[#0d1117] px-3 py-1 text-xs text-[#8b949e] md:flex md:w-[420px]">
+        <div className="hidden items-center gap-2 rounded-md border border-[#30363d] bg-[#0d1117] px-3 py-1 text-xs text-[#8b949e] md:flex md:w-105">
           <FaSearch className="shrink-0" /> <span className="truncate">suman-ranjan — portfolio</span>
         </div>
         <a
@@ -375,9 +376,9 @@ export default function SumanPortfolio() {
           id="about"
           className="relative flex min-h-[calc(100vh-6.5rem)] scroll-mt-24 items-center overflow-hidden border-b border-[#21262d] px-5 py-14 sm:px-8 lg:px-12 xl:px-16"
         >
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#30363d_1px,transparent_1px)] [background-size:24px_24px] opacity-40" />
-          <div className="glow pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[#1f6feb]/20 blur-3xl" />
-          <div className="glow pointer-events-none absolute -bottom-48 left-1/3 h-[420px] w-[420px] rounded-full bg-[#3fb950]/10 blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#30363d_1px,transparent_1px)] bg-size-[24px_24px] opacity-40" />
+          <div className="glow pointer-events-none absolute -right-40 -top-40 h-130 w-130 rounded-full bg-[#1f6feb]/20 blur-3xl" />
+          <div className="glow pointer-events-none absolute -bottom-48 left-1/3 h-105 w-105 rounded-full bg-[#3fb950]/10 blur-3xl" />
 
           <div className="relative grid w-full min-w-0 items-center gap-10 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
             <div className="min-w-0 space-y-7">
