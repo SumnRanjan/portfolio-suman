@@ -1,6 +1,10 @@
-fastapi
+# CPU-only PyTorch (much smaller than the default GPU build)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+sentence-transformers>=3.0
+qdrant-client>=1.12
+fastapi>=0.115
 uvicorn[standard]
 groq
-pydantic
+pydantic>=2.7
 python-dotenv
-pypdf
